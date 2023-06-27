@@ -4,9 +4,9 @@ from classifiers.linear_regression import BayesianLinearRegression
 from classifiers.util import mean_squared_error, root_mean_squared_error, max_error
 
 # reading the train, test, answers
-train = pd.read_csv("./dataset/train_processed.csv")
-test = pd.read_csv("./dataset/test_processed.csv")
-y_test = pd.read_csv("./dataset/submission.csv")["Item_Outlet_Sales"]
+train = pd.read_csv("./datasets/train_processed.csv")
+test = pd.read_csv("./datasets/test_processed.csv")
+y_test = pd.read_csv("./datasets/submission.csv")["Item_Outlet_Sales"]
 
 X_train = train.drop(["Item_Outlet_Sales"], axis=1).values
 y_train = train["Item_Outlet_Sales"].values
